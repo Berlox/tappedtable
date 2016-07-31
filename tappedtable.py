@@ -21,7 +21,7 @@ class SimpleGUI(wx.Frame):
         self.button = wx.Button(panel, -1, label = "Create Image(s)")
         self.url = wx.TextCtrl(panel, -1,size = (150, 20), style = wx.TE_PROCESS_ENTER)
         label = wx.StaticText(panel, -1, label = "Enter a tappedout.net deck URL:")
-        self.status = wx.TextCtrl(panel, -1, size= (250, 20), value = "")
+        self.status = wx.TextCtrl(panel, -1, size= (250, 60), value = "", style = wx.TE_MULTILINE)
         self.status.SetEditable(False)
         #sizers
         urlSizer = wx.BoxSizer(wx.HORIZONTAL)
@@ -44,7 +44,7 @@ class SimpleGUI(wx.Frame):
     def onGenerate(self, evt):
         #check if thread is already running, then make a new thread if it isnt.
         if active_count() == 1: #No additional thread, safe to make a new one
-            thread = WorkerThread(self.url.GetValue())
+            thread = WorkerThread(self.url.GetValue(), self.status)
             thread.run()
 
 
@@ -61,27 +61,30 @@ class WorkerThread(Thread):
     def run(self):
         if self.update:
             self.status.SetValue("Reading Webpage...")
+        if self.url == '' or "tappedout.net/mtg-decks" not in self.url :
+            self.status.SetValue("Please enter a tappedout.net deck URL")
+            return
         deck = Deck(self.url)
         if self.update:
-            self.status.SetValue("Gathering Images...")
+            self.status.SetValue(self.status.GetValue() + "\nGathering Images...")
         deck.download("images") #save images locally to beused
         savespot = self.url.split("/")[-2] #Use the deck name for a save spot
         if self.update:
-            self.status.SetValue("Stitching together...")
+            self.status.SetValue(self.status.GetValue() + "\nStitching together...")
         finalImages = deck.stitch(10, 7, 464, 664, 15) #stitch them bitches
         if self.update:
-            self.status.SetValue("Cleaning resources...")
+            self.status.SetValue(self.status.GetValue() + "\nCleaning resources...")
         deck.delete() #clear out images
         if self.update:
-            self.status.SetValue("Saving result in " + savespot)
+            self.status.SetValue(self.status.GetValue() + "\nSaving result in " + savespot + "...")
         if not os.path.exists(savespot):
             os.makedirs(savespot)
-        i = 0
+        i = 1
         for image in finalImages:
             image.save(savespot + '/' + str(i) + ".jpg", "JPEG")
             i +=1
         if self.update:
-            self.status.SetValue("Results saved at " + savespot)
+            self.status.SetValue(self.status.GetValue() + "\nResults saved at " + savespot  + ", card count is " + str(deck.count()))
 class Deck:
     """Decided to reorder this, making it easier to group all the functions"""
     def __init__(self, url = None):
@@ -141,7 +144,7 @@ class Deck:
         """returns how many cards in the deck"""
         count = 0
         for card in self.data:
-            count += card.num
+            count += int(card.num)
         return count
     def stitch(self, imgnumx, imgnumy, resolutionx, resolutiony, borderpx, hidden = None):
         """MUST RUN DOWNLOAD FOR THIS TO WORK.
