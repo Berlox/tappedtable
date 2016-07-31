@@ -224,7 +224,7 @@ class Card:
 
 
 if __name__ == '__main__':
-    app = wx.App()
+    app = wx.App(True, 'log.txt')
     frame = SimpleGUI()
     frame.Show()
     app.MainLoop()
