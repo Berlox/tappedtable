@@ -110,6 +110,9 @@ class Deck:
                     temp.num = link.get("data-quantity")
                 if link.has_attr("data-name"):
                     temp.name = link.get("data-name")
+                    if '/' in temp.name: #first step to supporting flip cards, they usually have a / in name, this will prevent program from giving invalid filename error
+                        temp.name = temp.name.replace('/', '_') #replace / with _ for file support
+                        #unfortunately due to resizing, the cards will be hella ugly as they are natively horizontal. Will fix later
             self.data.append(temp) #add the card to the list.
     def printDeck(self):
         for card in self.data:
