@@ -132,6 +132,7 @@ class Deck:
 
 class WorkerThread(Thread):
     def __init__(self, url, status = None):
+        super(WorkerThread, self).__init__()
         self.url = url
         self.status = status
         if status != None:
@@ -139,24 +140,24 @@ class WorkerThread(Thread):
         else:
             self.update = False
     def run(self):
+        savespot = self.url.split("/")[-2] #Use the deck name for a save spot
         if self.update:
-            self.status.SetValue("Reading Webpage...")
-        if self.url == '' or "tappedout.net/mtg-decks" not in self.url :
-            self.status.SetValue("Please enter a tappedout.net deck URL")
+            self.status[savespot] = "Reading Webpage..."
+        if "tappedout.net/mtg-decks" not in self.url :
+            self.status[savespot] = "Please enter a tappedout.net deck URL"
             return
         deck = Deck(self.url)
         if self.update:
-            self.status.SetValue(self.status.GetValue() + "\nGathering Images...")
-        deck.download("images") #save images locally to beused
-        savespot = self.url.split("/")[-2] #Use the deck name for a save spot
+            self.status[savespot] = "Gathering Images..."
+        deck.download("images-" + savespot) #save images locally to beused
         if self.update:
-            self.status.SetValue(self.status.GetValue() + "\nStitching together...")
+            self.status[savespot] = "Stitching together..."
         finalImages = deck.stitch(10, 7, 464, 664, 15) #stitch them bitches
         if self.update:
-            self.status.SetValue(self.status.GetValue() + "\nCleaning resources...")
+            self.status[savespot] = "Cleaning resources..."
         deck.delete() #clear out images
         if self.update:
-            self.status.SetValue(self.status.GetValue() + "\nSaving result in " + savespot + "...")
+            self.status[savespot] = "Saving result in " + savespot + "..."
         if not os.path.exists(savespot):
             os.makedirs(savespot)
         i = 1
@@ -164,7 +165,7 @@ class WorkerThread(Thread):
             image.save(savespot + '/' + str(i) + ".jpg", "JPEG")
             i +=1
         if self.update:
-            self.status.SetValue(self.status.GetValue() + "\nResults saved at " + savespot  + ", card count is " + str(deck.count()))
+            self.status[savespot] = "Results saved, card count is " + str(deck.count())
 
 
 
