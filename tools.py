@@ -9,6 +9,8 @@ import os #file commands
 import glob #for gettind dir list
 import shutil
 from threading import *
+import requests
+
 class Deck:
     """Decided to reorder this, making it easier to group all the functions"""
     def __init__(self, url = None):
@@ -28,16 +30,19 @@ class Deck:
             links = refine_soup.find_all('a')
             temp = Card()
             for link in links: #Check each link, if it has a value we want, pull it out.
-                if link.has_attr("data-image"):
-                    temp.img = link.get('data-image')
-                if link.has_attr("data-quantity"):
-                    temp.num = link.get("data-quantity")
-                if link.has_attr("data-name"):
-                    temp.name = link.get("data-name")
+                if link.has_attr('data-image'):
+                    temp.img = "https:" + link.get('data-image')
+                if link.has_attr('data-qty'):
+                    temp.num = link.get('data-qty')
+                if link.has_attr('data-name'):
+                    temp.name = link.get('data-name')
                     if '/' in temp.name: #first step to supporting flip cards, they usually have a / in name, this will prevent program from giving invalid filename error
                         temp.name = temp.name.replace('/', '_') #replace / with _ for file support
                         #unfortunately due to resizing, the cards will be hella ugly as they are natively horizontal. Will fix later
-            self.data.append(temp) #add the card to the list.
+            
+            #added this 5/23/17 to compensate for the site change
+            if temp.name != None:
+                self.data.append(temp) #add the card to the list.
     def printDeck(self):
         for card in self.data:
             card.printCard()
@@ -49,7 +54,12 @@ class Deck:
             os.makedirs(directory)
         for card in self.data:
             #go through and save each card in images
-            urllib.request.urlretrieve(card.img, directory+"/"+card.name+'.'+card.img.rsplit('.', 1)[1])
+            #5/23/17 I changed this to requests instead of urllib as the website was blocking urllib.
+            r = requests.get(card.img, stream = True)
+            if r.status_code == requests.codes.ok:
+                with open(directory+"/"+card.name+'.'+card.img.rsplit('.', 1)[1], 'wb') as f:
+                    r.raw.decode_content = True
+                    shutil.copyfileobj(r.raw, f)
             #print(card.name, " has been saved to "+ directory)
     def delete(self):
         """Super simple, deletes the directory when we're done with it., mostly just puts it under a friendly name"""
@@ -181,3 +191,10 @@ class Card:
         self.name = None
     def printCard(self):
         print (self.num, "x ", self.name, " (", self.img, ") ")
+
+if __name__ == "__main__":
+    hydras = Deck("http://tappedout.net/mtg-decks/hydras-galoore/")
+    hydras.printDeck()
+    hydras.download("temp")
+    
+    

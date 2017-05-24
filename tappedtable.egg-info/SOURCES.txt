@@ -1,0 +1,7 @@
+setup.py
+tappedtable.py
+tappedtable.egg-info/PKG-INFO
+tappedtable.egg-info/SOURCES.txt
+tappedtable.egg-info/dependency_links.txt
+tappedtable.egg-info/requires.txt
+tappedtable.egg-info/top_level.txt

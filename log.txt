@@ -1,0 +1,435 @@
+Creating Thread
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\threading.py", line 914, in _bootstrap_inner
+    self.run()
+  File "C:\Users\chris\Documents\GitHub\tappedtable\tools.py", line 152, in run
+    deck.download("images-" + savespot) #save images locally to beused
+  File "C:\Users\chris\Documents\GitHub\tappedtable\tools.py", line 52, in download
+    urllib.request.urlretrieve(card.img, directory+"/"+card.name+'.'+card.img.rsplit('.', 1)[1])
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\urllib\request.py", line 188, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\urllib\request.py", line 163, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\urllib\request.py", line 451, in open
+    req = Request(fullurl, data)
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\urllib\request.py", line 269, in __init__
+    self.full_url = url
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\urllib\request.py", line 295, in full_url
+    self._parse()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\urllib\request.py", line 324, in _parse
+    raise ValueError("unknown url type: %r" % self.full_url)
+ValueError: unknown url type: '//static.tappedout.net/mtg-cards-2/worldwake/arbor-elf/arbor-elf-cropped.jpg'
+
+Creating Thread
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\threading.py", line 914, in _bootstrap_inner
+    self.run()
+  File "C:\Users\chris\Documents\GitHub\tappedtable\tools.py", line 158, in run
+    deck = Deck(self.url)
+  File "C:\Users\chris\Documents\GitHub\tappedtable\tools.py", line 20, in __init__
+    self.addFromURL(url)
+  File "C:\Users\chris\Documents\GitHub\tappedtable\tools.py", line 23, in addFromURL
+    local_filename, headers = urllib.request.urlretrieve(url)
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\urllib\request.py", line 188, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\urllib\request.py", line 163, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\urllib\request.py", line 466, in open
+    response = self._open(req, data)
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\urllib\request.py", line 489, in _open
+    'unknown_open', req)
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\urllib\request.py", line 444, in _call_chain
+    result = func(*args)
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\urllib\request.py", line 1324, in unknown_open
+    raise URLError('unknown url type: %s' % type)
+urllib.error.URLError: <urlopen error unknown url type: "http>
+
+Creating Thread
+Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\threading.py", line 914, in _bootstrap_inner
+    self.run()
+  File "C:\Users\chris\Documents\GitHub\tappedtable\tools.py", line 158, in run
+    deck = Deck(self.url)
+  File "C:\Users\chris\Documents\GitHub\tappedtable\tools.py", line 20, in __init__
+    self.addFromURL(url)
+  File "C:\Users\chris\Documents\GitHub\tappedtable\tools.py", line 23, in addFromURL
+    local_filename, headers = urllib.request.urlretrieve(url)
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\urllib\request.py", line 188, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\urllib\request.py", line 163, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\urllib\request.py", line 451, in open
+    req = Request(fullurl, data)
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\urllib\request.py", line 269, in __init__
+    self.full_url = url
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\urllib\request.py", line 295, in full_url
+    self._parse()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\urllib\request.py", line 324, in _parse
+    raise ValueError("unknown url type: %r" % self.full_url)
+ValueError: unknown url type: 'tappedout.net/mtg-decks/hydras-galoore/'
+
+Creating Thread
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Creating Thread
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
+Traceback (most recent call last):
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 2126, in Notify
+    self.notify()
+  File "C:\Users\chris\AppData\Local\Programs\Python\Python35\lib\site-packages\wx\core.py", line 3255, in Notify
+    self.result = self.callable(*self.args, **self.kwargs)
+TypeError: updateStatus() missing 1 required positional argument: 'evt'
